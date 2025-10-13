@@ -93,16 +93,32 @@ The project uses Tailwind CSS with a custom configuration including:
 - Responsive design breakpoints
 - Custom font families (Poppins for headings, Inter for body)
 
+## 🎯 Recent Updates
+
+### Comprehensive Website Overhaul (January 2025)
+- ✅ **Complete Content Integration**: Merged Tyres2Go and JT Automotive services
+- ✅ **24+ Automotive Services**: Full JT Automotive service catalog with descriptions
+- ✅ **12+ Tyre Services**: Complete tyre service offerings
+- ✅ **6 Locations**: All Christchurch and Canterbury locations with full details
+- ✅ **Enhanced Pages**: Home, About, Contact, Tyres, and Auto Services fully populated
+- ✅ **Tyre Guidance**: "When to Replace Your Tyres" educational content
+- ✅ **Company Values**: Merged values and "Why Choose Us" sections
+- ✅ **Contact Integration**: Separate phone numbers for Tyres2Go and JT Automotive
+- ✅ **MTA Certification**: Prominently displayed across all pages
+- ✅ **Mobile Service**: 7-day availability highlighted throughout
+
+See `IMPLEMENTATION_SUMMARY.md` for complete details.
+
 ## 📝 To Do
 
+- [ ] Add Google Maps integration to Contact page
+- [ ] Add real images and professional photography
 - [ ] Add booking system functionality
 - [ ] Integrate with backend API
 - [ ] Add tyre search by vehicle registration
-- [ ] Implement image gallery
-- [ ] Add customer testimonials
-- [ ] Set up Google Maps integration
 - [ ] Add online payment system
-- [ ] Implement admin dashboard
+- [ ] Implement customer portal
+- [ ] Add blog/news section
 
 ## 🤝 Contributing
 
@@ -118,9 +134,21 @@ This project is proprietary and confidential.
 
 ## 📞 Contact
 
+### Tyres2Go
 - Website: www.tyres2go.net.nz
 - Email: info@tyres2go.net.nz
-- Phone: +64 123 456 789
+- Phone: 03 341 7675
+- Services: Tyres, Wheel Alignment, Mobile Service
+
+### JT Automotive
+- Website: www.jtauto.co.nz
+- Phone: 03 341 7674
+- Email: jtautomotiveltd@yahoo.co.nz
+- Services: WOF, Auto Repairs, Vehicle Servicing
+
+### Main Location
+477 Blenheim Road, Sockburn, Christchurch 8042  
+Mon-Fri: 8am-5pm | Sat: 9am-3pm | Sun: Closed
 
 export default defineConfig([
   globalIgnores(['dist']),

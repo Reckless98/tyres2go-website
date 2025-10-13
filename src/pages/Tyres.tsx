@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, AlertTriangle, Droplet, Navigation, Wrench, XCircle, Gauge } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
+import { tyreBrands, tyreServices, tyreReplacementGuidance } from '../config/businessData';
 
 interface Tyre {
   id: number;
@@ -41,12 +43,18 @@ const Tyres: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
-        <div className="container">
-          <h1 className="text-4xl md:text-5xl font-heading mb-4">Premium Tyres</h1>
-          <p className="text-xl text-primary-100 max-w-2xl">
-            Find the perfect tyres for your vehicle from our extensive range of quality brands.
-          </p>
+      <section className="bg-gradient-to-r from-primary-red to-primary-yellow text-white py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Premium Tyres in Christchurch</h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
+              Over 25+ leading tyre brands. Expert fitting, wheel alignment, and mobile service across 6 locations. Your safety is our priority.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -132,26 +140,139 @@ const Tyres: React.FC = () => {
         </div>
       </section>
 
+      {/* Tyre Categories Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gray-900">Browse by Tyre Type</h2>
+            <p className="text-xl text-gray-600">Find the perfect tyres for your vehicle</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tyreServices.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="p-6 h-full hover:shadow-lg transition-shadow cursor-pointer">
+                  <h3 className="text-xl font-heading font-bold mb-3 text-gray-900">{service.name}</h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* When to Replace Tyres Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gray-900">
+              {tyreReplacementGuidance.title}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {tyreReplacementGuidance.intro}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tyreReplacementGuidance.signs.map((sign, index) => {
+              const iconMap: { [key: string]: typeof AlertTriangle } = {
+                Gauge,
+                Droplet,
+                Navigation,
+                AlertTriangle,
+                Tool: Wrench,
+                XCircle,
+              };
+              const IconComponent = iconMap[sign.icon] || AlertTriangle;
+              
+              return (
+                <motion.div
+                  key={sign.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="p-6 h-full">
+                    <div className="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center mb-4">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold mb-3 text-gray-900">{sign.title}</h3>
+                    <p className="text-gray-600">{sign.description}</p>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Tyre Brands Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gray-900">Quality Tyre Brands</h2>
+            <p className="text-xl text-gray-600">We stock 25+ leading tyre brands</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {tyreBrands.map((brand, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-white border-2 border-gray-200 rounded-lg p-4 flex items-center justify-center hover:border-primary-red transition-colors"
+              >
+                <span className="font-heading font-bold text-gray-700">{brand}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Info Section */}
-      <section className="section bg-gray-50">
-        <div className="container">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-6">
-              <h3 className="text-xl font-heading mb-3">Free Fitting</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-gray-900">Professional Fitting</h3>
               <p className="text-gray-600">
-                Professional tyre fitting included with every purchase at no extra cost.
+                Expert tyre fitting with state-of-the-art equipment at all our locations.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-heading mb-3">Price Match Guarantee</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-gray-900">Hunter Laser Alignment</h3>
               <p className="text-gray-600">
-                Found a better price? We'll match it and give you an extra discount.
+                9 Hunter Laser wheel alignment machines - the most advanced technology available.
               </p>
             </Card>
             <Card className="p-6">
-              <h3 className="text-xl font-heading mb-3">Expert Advice</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-gray-900">Mobile Service</h3>
               <p className="text-gray-600">
-                Not sure which tyres to choose? Our experts are here to help you decide.
+                We come to you! Mobile tyre fitting and balancing 7 days a week across Christchurch.
               </p>
             </Card>
           </div>
