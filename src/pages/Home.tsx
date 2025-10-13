@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, Wrench, Car, Shield, Clock, Star, Award, 
-  Users, CheckCircle, Phone, MapPin, Zap, Settings, Wind,
+  Users, Phone, MapPin, Zap, Settings, Wind,
   Battery, Disc, Truck, Leaf
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 // import SEO from '../components/common/SEO';
-import { tyreBrands, testimonials, businessStats, locations, tyreServices } from '../config/businessData';
+import { tyreBrands, testimonials, businessStats } from '../config/businessData';
 // import { seoConfig } from '../config/seo';
 
 const Home: React.FC = () => {

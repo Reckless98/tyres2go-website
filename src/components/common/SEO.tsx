@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { seoConfig } from '../config/seo';
+import { seoConfig } from '../../config/seo';
 
 interface SEOProps {
   title?: string;
