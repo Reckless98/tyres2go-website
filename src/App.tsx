@@ -9,6 +9,13 @@ import Tyres from './pages/Tyres';
 import AutoServices from './pages/AutoServices';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Services from './pages/Services';
+
+// Service Pages
+import WOFService from './pages/services/WOFService';
+import CarServicing from './pages/services/CarServicing';
+import BrakeRepairs from './pages/services/BrakeRepairs';
+import WheelAlignment from './pages/services/WheelAlignment';
 
 function App() {
   return (
@@ -23,8 +30,15 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/tyres" element={<Tyres />} />
               <Route path="/auto-services" element={<AutoServices />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              
+              {/* Service Pages */}
+              <Route path="/services/wof" element={<WOFService />} />
+              <Route path="/services/car-servicing" element={<CarServicing />} />
+              <Route path="/services/brakes" element={<BrakeRepairs />} />
+              <Route path="/services/wheel-alignment" element={<WheelAlignment />} />
             </Routes>
           </main>
           <Footer />
