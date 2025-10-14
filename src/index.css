@@ -1,38 +1,43 @@
 @import "tailwindcss";
 
-/* Professional Automotive Color System - WCAG 2.1 AA Compliant */
+/* Artistic Automotive Color System - Tyres2Go Brand */
 @theme {
-  /* Primary Brand Colors - Trust & Reliability */
-  --color-primary: #1e73be;          /* Professional Blue - Trust, Security */
-  --color-primary-dark: #155a95;     /* Darker Blue - Depth */
-  --color-primary-light: #4a90d9;    /* Lighter Blue - Approachability */
-  --color-primary-50: #e3f2fd;       /* Very Light Blue - Backgrounds */
-  --color-primary-100: #bbdefb;
-  --color-primary-900: #0d47a1;
+  /* Primary Brand Colors - Dynamic Blue Spectrum */
+  --color-primary: #2563eb;          /* Vibrant Royal Blue - Energy & Trust */
+  --color-primary-dark: #1e40af;     /* Deep Sapphire Blue - Depth & Luxury */
+  --color-primary-light: #60a5fa;    /* Sky Blue - Approachability */
+  --color-primary-50: #eff6ff;       /* Ice Blue - Subtle Backgrounds */
+  --color-primary-100: #dbeafe;
+  --color-primary-900: #1e3a8a;
   
-  /* Secondary Brand Colors - Energy & Action */
-  --color-secondary: #ff8c00;        /* Vibrant Orange - Energy, Action */
-  --color-secondary-dark: #cc7000;   /* Darker Orange - Emphasis */
-  --color-secondary-light: #ffb347;  /* Lighter Orange - Highlights */
-  --color-secondary-50: #fff3e0;     /* Very Light Orange - Backgrounds */
+  /* Secondary Brand Colors - Energetic Orange Spectrum */
+  --color-secondary: #f97316;        /* Bold Tangerine Orange - Action & Speed */
+  --color-secondary-dark: #ea580c;   /* Burnt Orange - Intensity */
+  --color-secondary-light: #fb923c;  /* Coral Orange - Warmth */
+  --color-secondary-50: #fff7ed;     /* Soft Peach - Gentle Backgrounds */
   
-  /* Neutral Colors - Balance & Professionalism */
-  --color-gray-50: #fafafa;          /* Off-white backgrounds */
-  --color-gray-100: #f5f5f5;         /* Light gray backgrounds */
-  --color-gray-200: #eeeeee;         /* Subtle borders */
-  --color-gray-300: #e0e0e0;         /* Borders */
-  --color-gray-400: #bdbdbd;         /* Disabled states */
-  --color-gray-500: #9e9e9e;         /* Secondary text */
-  --color-gray-600: #757575;         /* Body text */
-  --color-gray-700: #616161;         /* Dark text */
-  --color-gray-800: #424242;         /* Headings */
-  --color-gray-900: #212121;         /* Primary text */
+  /* Accent Colors - Road & Automotive Inspired */
+  --color-accent: #10b981;           /* Fresh Green - Eco & Performance */
+  --color-accent-dark: #059669;      /* Forest Green - Sustainability */
+  --color-accent-yellow: #fbbf24;    /* Golden Yellow - Premium & Warning */
+  
+  /* Neutral Colors - Sophisticated Gray Palette */
+  --color-gray-50: #f9fafb;          /* Cool White - Clean backgrounds */
+  --color-gray-100: #f3f4f6;         /* Soft Gray - Subtle surfaces */
+  --color-gray-200: #e5e7eb;         /* Light Gray - Borders */
+  --color-gray-300: #d1d5db;         /* Mid Gray - Dividers */
+  --color-gray-400: #9ca3af;         /* Disabled states */
+  --color-gray-500: #6b7280;         /* Secondary text */
+  --color-gray-600: #4b5563;         /* Body text */
+  --color-gray-700: #374151;         /* Dark text */
+  --color-gray-800: #1f2937;         /* Headings */
+  --color-gray-900: #111827;         /* Primary text */
   
   /* Semantic Colors - User Feedback */
-  --color-success: #4caf50;          /* Success states */
-  --color-warning: #ff9800;          /* Warning states */
-  --color-error: #f44336;            /* Error states */
-  --color-info: #2196f3;             /* Information */
+  --color-success: #10b981;          /* Success - Emerald Green */
+  --color-warning: #f59e0b;          /* Warning - Amber */
+  --color-error: #ef4444;            /* Error - Red */
+  --color-info: #3b82f6;             /* Information - Blue */
   
   /* Animation definitions */
   --animate-gradient: gradient 8s ease infinite;
@@ -47,23 +52,27 @@
 
 /* Legacy CSS Variables for compatibility */
 :root {
-  /* Primary Colors */
-  --primary: #1e73be;
-  --primary-blue: #1e73be;
-  --primary-dark: #155a95;
-  --primary-light: #4a90d9;
+  /* Primary Colors - Vibrant Blue */
+  --primary: #2563eb;
+  --primary-blue: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-light: #60a5fa;
   
-  /* Secondary Colors */
-  --secondary: #ff8c00;
-  --primary-orange: #ff8c00;
-  --secondary-dark: #cc7000;
-  --secondary-light: #ffb347;
+  /* Secondary Colors - Bold Orange */
+  --secondary: #f97316;
+  --primary-orange: #f97316;
+  --secondary-dark: #ea580c;
+  --secondary-light: #fb923c;
+  
+  /* Accent Colors */
+  --accent-green: #10b981;
+  --accent-yellow: #fbbf24;
   
   /* Legacy support */
-  --dark-blue: #155a95;
-  --light-blue: #4a90d9;
-  --dark-orange: #cc7000;
-  --light-orange: #ffb347;
+  --dark-blue: #1e40af;
+  --light-blue: #60a5fa;
+  --dark-orange: #ea580c;
+  --light-orange: #fb923c;
 }
 
 * {
@@ -151,46 +160,70 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Explicit Brand Color Utilities */
+/* Explicit Brand Color Utilities - Artistic Palette */
 .bg-primary-blue {
-  background-color: #1e73be !important;
+  background-color: #2563eb !important;
 }
 
 .bg-primary-orange {
-  background-color: #ff8c00 !important;
+  background-color: #f97316 !important;
 }
 
 .text-primary-blue {
-  color: #1e73be !important;
+  color: #2563eb !important;
 }
 
 .text-primary-orange {
-  color: #ff8c00 !important;
+  color: #f97316 !important;
 }
 
 .border-primary-blue {
-  border-color: #1e73be !important;
+  border-color: #2563eb !important;
 }
 
 .border-primary-orange {
-  border-color: #ff8c00 !important;
+  border-color: #f97316 !important;
 }
 
 .from-primary-blue {
-  --tw-gradient-from: #1e73be !important;
+  --tw-gradient-from: #2563eb !important;
 }
 
 .via-primary-orange {
-  --tw-gradient-via: #ff8c00 !important;
+  --tw-gradient-via: #f97316 !important;
 }
 
 .to-primary-blue {
-  --tw-gradient-to: #1e73be !important;
+  --tw-gradient-to: #2563eb !important;
 }
 
-/* Gradient Text */
+/* Accent Color Utilities */
+.bg-accent-green {
+  background-color: #10b981 !important;
+}
+
+.text-accent-green {
+  color: #10b981 !important;
+}
+
+.bg-accent-yellow {
+  background-color: #fbbf24 !important;
+}
+
+.text-accent-yellow {
+  color: #fbbf24 !important;
+}
+
+/* Gradient Text - Artistic Blend */
 .gradient-text {
-  background: linear-gradient(135deg, #1e73be 0%, #ff8c00 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #f97316 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

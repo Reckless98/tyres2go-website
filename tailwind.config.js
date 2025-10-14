@@ -8,40 +8,42 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1e73be', // Tyres2Go Blue
-          blue: '#1e73be',
-          orange: '#ff8c00', // Tyres2Go Orange/Amber
-          dark: '#0d5a9e',
-          light: '#3a8ed4',
-          50: '#e3f2fd',
-          100: '#bbdefb',
-          200: '#90caf9',
-          300: '#64b5f6',
-          400: '#42a5f5',
-          500: '#1e73be',
-          600: '#1e88e5',
-          700: '#1976d2',
-          800: '#1565c0',
-          900: '#0d5a9e',
+          DEFAULT: '#2563eb', // Vibrant Royal Blue
+          blue: '#2563eb',
+          orange: '#f97316', // Bold Tangerine Orange
+          dark: '#1e40af',
+          light: '#60a5fa',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#2563eb',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
         },
         secondary: {
-          DEFAULT: '#ff8c00', // Tyres2Go Orange
-          dark: '#e67e00',
-          light: '#ffa31a',
-          50: '#fff3e0',
-          100: '#ffe0b2',
-          200: '#ffcc80',
-          300: '#ffb74d',
-          400: '#ffa726',
-          500: '#ff8c00',
-          600: '#fb8c00',
-          700: '#f57c00',
-          800: '#ef6c00',
-          900: '#e67e00',
+          DEFAULT: '#f97316', // Bold Orange
+          dark: '#ea580c',
+          light: '#fb923c',
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
         },
         accent: {
-          gray: '#424242',
-          lightGray: '#757575',
+          green: '#10b981',  // Fresh Green
+          yellow: '#fbbf24', // Golden Yellow
+          gray: '#6b7280',
+          lightGray: '#9ca3af',
         },
       },
       fontFamily: {
