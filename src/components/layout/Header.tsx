@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const navigation = [
@@ -16,14 +17,26 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar - Tyres2Go Red & Yellow Theme */}
-      <div className="bg-gradient-to-r from-primary-red to-primary-yellow text-white py-2">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/80 backdrop-blur-lg shadow-xl' 
+        : 'bg-white shadow-lg'
+    }`}>
+      {/* Top Bar - Tyres2Go Red & Yellow Theme with Gradient Animation */}
+      <div className="bg-gradient-to-r from-primary-red via-primary-yellow to-primary-red bg-[length:200%_100%] animate-gradient text-white py-2">
         <div className="container mx-auto px-6 flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:033417675" className="flex items-center gap-2 hover:text-gray-100 transition-colors">
-              <Phone size={16} />
+            <a href="tel:033417675" className="flex items-center gap-2 hover:text-gray-100 transition-all hover:scale-105">
+              <Phone size={16} className="animate-pulse-slow" />
               <span className="font-medium">03 341 7675</span>
             </a>
           </div>
@@ -39,35 +52,39 @@ const Header: React.FC = () => {
       {/* Main Navigation */}
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo with Hover Effect */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="text-2xl font-heading font-bold">
-              <span className="text-primary-red">Tyres</span>
-              <span className="text-primary-yellow">2</span>
-              <span className="text-primary-red">Go</span>
+            <div className="text-2xl font-heading font-bold transition-all duration-300 group-hover:scale-110">
+              <span className="text-primary-red transition-all group-hover:drop-shadow-[0_0_8px_rgba(227,30,36,0.6)]">Tyres</span>
+              <span className="text-primary-yellow transition-all group-hover:drop-shadow-[0_0_8px_rgba(253,185,19,0.6)]">2</span>
+              <span className="text-primary-red transition-all group-hover:drop-shadow-[0_0_8px_rgba(227,30,36,0.6)]">Go</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with Enhanced Hover Effects */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium transition-colors relative ${
+                className={`font-medium transition-all duration-300 relative group ${
                   isActive(item.href)
-                    ? 'text-primary-red after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary-yellow'
+                    ? 'text-primary-red'
                     : 'text-gray-700 hover:text-primary-red'
                 }`}
               >
                 {item.name}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-red to-primary-yellow transition-all duration-300 ${
+                  isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </Link>
             ))}
             <Link 
               to="/contact" 
-              className="bg-primary-red text-white hover:bg-primary-dark px-6 py-2 rounded-lg font-medium transition-all shadow-md hover:shadow-lg"
+              className="relative bg-gradient-to-r from-primary-red to-primary-dark text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-neon hover:scale-105 overflow-hidden group"
             >
-              Book Now
+              <span className="relative z-10">Book Now</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-primary-red transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
           </div>
 

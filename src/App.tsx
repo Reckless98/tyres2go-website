@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import ScrollProgress from './components/common/ScrollProgress';
+import FloatingActions from './components/common/FloatingActions';
 import Home from './pages/Home';
 import Tyres from './pages/Tyres';
 import AutoServices from './pages/AutoServices';
@@ -12,6 +14,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollProgress />
+        <FloatingActions />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">

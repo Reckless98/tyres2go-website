@@ -134,9 +134,10 @@ const Home: React.FC = () => {
                     variant="secondary"
                     size="lg"
                     onClick={() => window.location.href = 'tel:033417675'}
-                    className="bg-white text-primary-red hover:bg-gray-100 shadow-lg"
+                    className="bg-white text-primary-red hover:bg-gray-100 shadow-2xl hover:shadow-neon"
+                    glow
                   >
-                    <Phone className="w-5 h-5 mr-2" />
+                    <Phone className="w-5 h-5" />
                     Call 03 341 7675
                   </Button>
                   <Button
@@ -144,10 +145,10 @@ const Home: React.FC = () => {
                     size="lg"
                     as={Link}
                     to="/contact"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary-red"
+                    className="border-2 border-white text-white hover:bg-white hover:text-primary-red backdrop-blur-sm"
                   >
                     Book Mobile Service
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5" />
                   </Button>
                 </div>
 
@@ -234,27 +235,36 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               {mainServices.map((service, index) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
                   <Link to={service.link}>
-                    <Card className="h-full hover:shadow-xl transition-all duration-300 group border-2 border-transparent hover:border-primary-red">
-                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <Card gradient hover className="h-full p-6 group">
+                      <motion.div 
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg`}
+                        whileHover={{ scale: 1.15, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      >
                         <service.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary-red transition-colors">
+                      </motion.div>
+                      <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:gradient-text transition-all">
                         {service.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
                       <div className="flex items-center text-primary-red font-semibold group-hover:gap-2 transition-all">
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover:ml-0" />
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          <ArrowRight className="w-4 h-4 ml-1" />
+                        </motion.div>
                       </div>
                     </Card>
                   </Link>
@@ -264,22 +274,36 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Quick Services */}
-        <section className="py-12 bg-gradient-to-r from-primary-red to-primary-yellow text-white">
-          <div className="container mx-auto px-6">
-            <h3 className="text-2xl font-bold mb-6 text-center">Popular Services</h3>
+        {/* Quick Services with Glass Effect */}
+        <section className="py-16 bg-gradient-to-r from-primary-red via-primary-yellow to-primary-red bg-[length:200%_100%] animate-gradient text-white relative overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+          </div>
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold mb-8 text-center drop-shadow-lg"
+            >
+              Popular Services
+            </motion.h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {quickServices.map((service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all cursor-pointer"
+                  transition={{ delay: index * 0.05, type: "spring" }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="glass rounded-xl p-5 text-center cursor-pointer group shadow-lg hover:shadow-2xl transition-all"
                 >
-                  <service.icon className="w-8 h-8 mx-auto mb-2" />
-                  <div className="text-sm font-medium">{service.name}</div>
+                  <service.icon className="w-10 h-10 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <div className="text-sm font-semibold">{service.name}</div>
                 </motion.div>
               ))}
             </div>
