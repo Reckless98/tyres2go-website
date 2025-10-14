@@ -62,49 +62,12 @@ const Home: React.FC = () => {
       /> */}
       
       <div className="min-h-screen">
-        {/* Hero Section with Tyres2Go Blue & Orange Theme */}
-        <section className="relative bg-gradient-to-br from-primary-blue via-primary-orange to-secondary-dark text-white py-20 overflow-hidden">
-          {/* Animated Background Blobs */}
-          <div className="absolute inset-0 overflow-hidden">
-            <motion.div
-              className="absolute top-0 -left-4 w-72 h-72 bg-primary-orange rounded-full mix-blend-multiply filter blur-xl opacity-30"
-              animate={{
-                scale: [1, 1.2, 1],
-                x: [0, 30, 0],
-                y: [0, -30, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <motion.div
-              className="absolute top-0 -right-4 w-72 h-72 bg-secondary-dark rounded-full mix-blend-multiply filter blur-xl opacity-30"
-              animate={{
-                scale: [1.2, 1, 1.2],
-                x: [0, -30, 0],
-                y: [0, 30, 0],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-8 left-20 w-72 h-72 bg-primary-blue rounded-full mix-blend-multiply filter blur-xl opacity-30"
-              animate={{
-                scale: [1, 1.1, 1],
-                x: [0, -20, 0],
-                y: [0, 20, 0],
-              }}
-              transition={{
-                duration: 9,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+        {/* Hero Section with Clean White Background */}
+        <section className="relative bg-white py-20 overflow-hidden">
+          {/* Decorative colored accents */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary-blue/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-orange/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -114,18 +77,18 @@ const Home: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                  <span className="flex items-center gap-2 text-sm font-semibold">
+                <div className="inline-block bg-primary-blue/10 rounded-full px-4 py-2 mb-6 border border-primary-blue/20">
+                  <span className="flex items-center gap-2 text-sm font-semibold text-primary-blue">
                     <Award className="w-4 h-4" />
                     MTA Certified • 15+ Years Experience • 6 Locations
                   </span>
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 font-heading">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 font-heading text-gray-900">
                   Quality Tyres & Expert Auto Repairs in Christchurch
                 </h1>
                 
-                <p className="text-xl md:text-2xl mb-8 text-white/95">
+                <p className="text-xl md:text-2xl mb-8 text-gray-600">
                   From premium tyres to complete automotive services - your trusted partner for safe, reliable vehicle care across Canterbury.
                 </p>
 
@@ -152,17 +115,17 @@ const Home: React.FC = () => {
                   </Button>
                 </div>
 
-                <div className="flex flex-wrap gap-6 text-sm">
+                <div className="flex flex-wrap gap-6 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5" />
+                    <MapPin className="w-5 h-5 text-primary-blue" />
                     <span>6 Locations in Christchurch</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
+                    <Clock className="w-5 h-5 text-primary-orange" />
                     <span>Open 7 Days • Mobile Service Available</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current text-primary-orange" />
                     <span>4.1 Google Rating</span>
                   </div>
                 </div>
@@ -275,11 +238,11 @@ const Home: React.FC = () => {
         </section>
 
         {/* Quick Services with Glass Effect */}
-        <section className="py-16 bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue bg-[length:200%_100%] animate-gradient text-white relative overflow-hidden">
+        <section className="py-16 bg-primary-blue text-white relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-96 h-96 bg-primary-orange rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-orange rounded-full filter blur-3xl"></div>
           </div>
           
           <div className="container mx-auto px-6 relative z-10">
@@ -335,7 +298,7 @@ const Home: React.FC = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.03 }}
-                  className="bg-gray-50 rounded-lg p-4 flex items-center justify-center hover:shadow-lg hover:bg-primary-red/5 transition-all cursor-pointer border-2 border-transparent hover:border-primary-yellow"
+                  className="bg-gray-50 rounded-lg p-4 flex items-center justify-center hover:shadow-lg hover:bg-primary-blue/5 transition-all cursor-pointer border-2 border-transparent hover:border-primary-orange"
                 >
                   <span className="font-semibold text-gray-700 text-sm text-center">{brand}</span>
                 </motion.div>
