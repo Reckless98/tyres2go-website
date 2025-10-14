@@ -19,21 +19,21 @@ const Home: React.FC = () => {
       title: 'Premium Tyres',
       description: 'Extensive range of quality tyres from 25+ leading brands. Passenger, 4WD, SUV, performance, and commercial tyres.',
       link: '/tyres',
-      gradient: 'from-primary-red to-primary-yellow',
+      gradient: 'from-primary-blue to-primary-orange',
     },
     {
       icon: Wrench,
       title: 'Auto Repairs & Servicing',
       description: 'Complete mechanical repairs, general servicing, brakes, transmission, engine work by certified technicians.',
       link: '/auto-services',
-      gradient: 'from-primary-yellow to-secondary-dark',
+      gradient: 'from-primary-orange to-secondary-dark',
     },
     {
       icon: Shield,
       title: 'WOF Inspections',
       description: 'Comprehensive Warrant of Fitness inspections and repairs. MTA certified. Keep your vehicle road-legal and safe.',
       link: '/auto-services',
-      gradient: 'from-primary-red to-primary-dark',
+      gradient: 'from-primary-blue to-primary-dark',
     },
     {
       icon: Zap,
@@ -62,12 +62,12 @@ const Home: React.FC = () => {
       /> */}
       
       <div className="min-h-screen">
-        {/* Hero Section with Tyres2Go Red & Yellow Theme */}
-        <section className="relative bg-gradient-to-br from-primary-red via-primary-yellow to-secondary-dark text-white py-20 overflow-hidden">
+        {/* Hero Section with Tyres2Go Blue & Orange Theme */}
+        <section className="relative bg-gradient-to-br from-primary-blue via-primary-orange to-secondary-dark text-white py-20 overflow-hidden">
           {/* Animated Background Blobs */}
           <div className="absolute inset-0 overflow-hidden">
             <motion.div
-              className="absolute top-0 -left-4 w-72 h-72 bg-primary-yellow rounded-full mix-blend-multiply filter blur-xl opacity-30"
+              className="absolute top-0 -left-4 w-72 h-72 bg-primary-orange rounded-full mix-blend-multiply filter blur-xl opacity-30"
               animate={{
                 scale: [1, 1.2, 1],
                 x: [0, 30, 0],
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
               }}
             />
             <motion.div
-              className="absolute -bottom-8 left-20 w-72 h-72 bg-primary-red rounded-full mix-blend-multiply filter blur-xl opacity-30"
+              className="absolute -bottom-8 left-20 w-72 h-72 bg-primary-blue rounded-full mix-blend-multiply filter blur-xl opacity-30"
               animate={{
                 scale: [1, 1.1, 1],
                 x: [0, -20, 0],
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
                     variant="secondary"
                     size="lg"
                     onClick={() => window.location.href = 'tel:033417675'}
-                    className="bg-white text-primary-red hover:bg-gray-100 shadow-2xl hover:shadow-neon"
+                    className="bg-white text-primary-blue hover:bg-gray-100 shadow-2xl hover:shadow-neon"
                     glow
                   >
                     <Phone className="w-5 h-5" />
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
                     size="lg"
                     as={Link}
                     to="/contact"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary-red backdrop-blur-sm"
+                    className="border-2 border-white text-white hover:bg-white hover:text-primary-blue backdrop-blur-sm"
                   >
                     Book Mobile Service
                     <ArrowRight className="w-5 h-5" />
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-primary-red mb-2">{businessStats.yearsExperience}</div>
+                <div className="text-4xl font-bold text-primary-blue mb-2">{businessStats.yearsExperience}</div>
                 <div className="text-gray-600">Years Experience</div>
               </motion.div>
               <motion.div
@@ -191,7 +191,7 @@ const Home: React.FC = () => {
                 transition={{ delay: 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-primary-yellow mb-2">{businessStats.locations}</div>
+                <div className="text-4xl font-bold text-primary-orange mb-2">{businessStats.locations}</div>
                 <div className="text-gray-600">Service Centres</div>
               </motion.div>
               <motion.div
@@ -201,7 +201,7 @@ const Home: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-primary-red mb-2">{businessStats.brandsAvailable}</div>
+                <div className="text-4xl font-bold text-primary-blue mb-2">{businessStats.brandsAvailable}</div>
                 <div className="text-gray-600">Tyre Brands</div>
               </motion.div>
               <motion.div
@@ -211,7 +211,7 @@ const Home: React.FC = () => {
                 transition={{ delay: 0.3 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-primary-yellow mb-2">{businessStats.googleRating}</div>
+                <div className="text-4xl font-bold text-primary-orange mb-2">{businessStats.googleRating}</div>
                 <div className="text-gray-600">Google Rating</div>
               </motion.div>
             </div>
@@ -275,7 +275,7 @@ const Home: React.FC = () => {
         </section>
 
         {/* Quick Services with Glass Effect */}
-        <section className="py-16 bg-gradient-to-r from-primary-red via-primary-yellow to-primary-red bg-[length:200%_100%] animate-gradient text-white relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue bg-[length:200%_100%] animate-gradient text-white relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>

@@ -21,12 +21,12 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses = 'relative inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group';
   
-  // Tyres2Go Red & Yellow Theme with Enhanced Effects
+  // Tyres2Go Blue & Orange Theme with Enhanced Effects
   const variantClasses = {
-    primary: 'bg-primary-red text-white hover:bg-primary-dark focus:ring-primary-red shadow-lg hover:shadow-neon hover:scale-105 active:scale-95',
-    secondary: 'bg-primary-yellow text-gray-900 hover:bg-secondary-dark hover:text-white focus:ring-primary-yellow shadow-lg hover:shadow-neon-yellow hover:scale-105 active:scale-95',
-    outline: 'border-2 border-primary-red text-primary-red hover:bg-primary-red hover:text-white focus:ring-primary-red hover:scale-105 active:scale-95',
-    gradient: 'bg-gradient-to-r from-primary-red via-primary-yellow to-primary-red bg-[length:200%_100%] text-white hover:bg-right focus:ring-primary-yellow shadow-lg hover:shadow-neon animate-gradient hover:scale-105 active:scale-95',
+    primary: 'bg-primary-blue text-white hover:bg-primary-dark focus:ring-primary-blue shadow-lg hover:shadow-neon hover:scale-105 active:scale-95',
+    secondary: 'bg-primary-orange text-white hover:bg-secondary-dark focus:ring-primary-orange shadow-lg hover:shadow-neon-orange hover:scale-105 active:scale-95',
+    outline: 'border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white focus:ring-primary-blue hover:scale-105 active:scale-95',
+    gradient: 'bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue bg-[length:200%_100%] text-white hover:bg-right focus:ring-primary-orange shadow-lg hover:shadow-neon animate-gradient hover:scale-105 active:scale-95',
   };
   
   const sizeClasses = {

@@ -2,12 +2,12 @@
 
 /* Tyres2Go Brand Colors */
 :root {
-  --primary-red: #E31E24;
-  --primary-yellow: #FDB913;
-  --dark-red: #B71C1C;
-  --light-red: #FF5252;
-  --dark-yellow: #F57C00;
-  --light-yellow: #FFD54F;
+  --primary-blue: #1e73be;
+  --primary-orange: #ff8c00;
+  --dark-blue: #0d5a9e;
+  --light-blue: #3a8ed4;
+  --dark-orange: #e67e00;
+  --light-orange: #ffa31a;
 }
 
 * {
@@ -38,12 +38,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background-color: var(--primary-red);
+  background-color: var(--primary-blue);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-red);
+  background-color: var(--dark-blue);
 }
 
 .container {
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-yellow) 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -171,12 +171,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary-red), var(--primary-yellow));
+  background: linear-gradient(180deg, var(--primary-blue), var(--primary-orange));
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--dark-red);
+  background: var(--dark-blue);
 }
 
 /* Gradient Border Animation */
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   inset: -2px;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(90deg, var(--primary-red), var(--primary-yellow), var(--primary-red));
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange), var(--primary-blue));
   background-size: 200% 200%;
   animation: border-dance 3s ease infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modern Focus Styles */
 *:focus-visible {
-  outline: 2px solid var(--primary-yellow);
+  outline: 2px solid var(--primary-orange);
   outline-offset: 2px;
   border-radius: 4px;
 }

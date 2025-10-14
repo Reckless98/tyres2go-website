@@ -17,14 +17,14 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const baseClass = 'rounded-xl transition-all duration-300 overflow-hidden';
   const hoverClass = hover ? 'card-hover cursor-pointer' : '';
-  const gradientClass = gradient ? 'bg-gradient-to-br from-white to-gray-50 border-2 border-transparent hover:border-primary-red/20' : 'bg-white';
+  const gradientClass = gradient ? 'bg-gradient-to-br from-white to-gray-50 border-2 border-transparent hover:border-primary-blue/20' : 'bg-white';
   const glassClass = glass ? 'glass shadow-glass' : 'shadow-lg';
   
   return (
     <div className={`${baseClass} ${hoverClass} ${gradientClass} ${glassClass} ${className} group relative`}>
       {/* Gradient Border Effect on Hover */}
       {hover && !glass && (
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-red via-primary-yellow to-primary-red opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue via-primary-orange to-primary-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10"></div>
       )}
       
       {/* Card Content */}

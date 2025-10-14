@@ -8,36 +8,36 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#E31E24', // Tyres2Go Red
-          red: '#E31E24',
-          yellow: '#FDB913', // Tyres2Go Yellow
-          dark: '#B71C1C',
-          light: '#FF5252',
-          50: '#ffebee',
-          100: '#ffcdd2',
-          200: '#ef9a9a',
-          300: '#e57373',
-          400: '#ef5350',
-          500: '#E31E24',
-          600: '#e53935',
-          700: '#d32f2f',
-          800: '#c62828',
-          900: '#B71C1C',
+          DEFAULT: '#1e73be', // Tyres2Go Blue
+          blue: '#1e73be',
+          orange: '#ff8c00', // Tyres2Go Orange/Amber
+          dark: '#0d5a9e',
+          light: '#3a8ed4',
+          50: '#e3f2fd',
+          100: '#bbdefb',
+          200: '#90caf9',
+          300: '#64b5f6',
+          400: '#42a5f5',
+          500: '#1e73be',
+          600: '#1e88e5',
+          700: '#1976d2',
+          800: '#1565c0',
+          900: '#0d5a9e',
         },
         secondary: {
-          DEFAULT: '#FDB913', // Tyres2Go Yellow
-          dark: '#F57C00',
-          light: '#FFD54F',
-          50: '#fff8e1',
-          100: '#ffecb3',
-          200: '#ffe082',
-          300: '#ffd54f',
-          400: '#ffca28',
-          500: '#FDB913',
-          600: '#ffb300',
-          700: '#ffa000',
-          800: '#ff8f00',
-          900: '#F57C00',
+          DEFAULT: '#ff8c00', // Tyres2Go Orange
+          dark: '#e67e00',
+          light: '#ffa31a',
+          50: '#fff3e0',
+          100: '#ffe0b2',
+          200: '#ffcc80',
+          300: '#ffb74d',
+          400: '#ffa726',
+          500: '#ff8c00',
+          600: '#fb8c00',
+          700: '#f57c00',
+          800: '#ef6c00',
+          900: '#e67e00',
         },
         accent: {
           gray: '#424242',
@@ -167,10 +167,10 @@ export default {
         },
         glow: {
           '0%, 100%': {
-            boxShadow: '0 0 20px rgba(227, 30, 36, 0.4)',
+            boxShadow: '0 0 20px rgba(30, 115, 190, 0.4)',
           },
           '50%': {
-            boxShadow: '0 0 40px rgba(227, 30, 36, 0.6), 0 0 60px rgba(253, 185, 19, 0.4)',
+            boxShadow: '0 0 40px rgba(30, 115, 190, 0.6), 0 0 60px rgba(255, 140, 0, 0.4)',
           },
         },
         gradient: {
@@ -188,8 +188,8 @@ export default {
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
         'glass-lg': '0 8px 32px 0 rgba(31, 38, 135, 0.25)',
-        'neon': '0 0 10px rgba(227, 30, 36, 0.5), 0 0 20px rgba(227, 30, 36, 0.3)',
-        'neon-yellow': '0 0 10px rgba(253, 185, 19, 0.5), 0 0 20px rgba(253, 185, 19, 0.3)',
+        'neon': '0 0 10px rgba(30, 115, 190, 0.5), 0 0 20px rgba(30, 115, 190, 0.3)',
+        'neon-orange': '0 0 10px rgba(255, 140, 0, 0.5), 0 0 20px rgba(255, 140, 0, 0.3)',
         'inner-glow': 'inset 0 2px 12px rgba(255, 255, 255, 0.3)',
       },
     },

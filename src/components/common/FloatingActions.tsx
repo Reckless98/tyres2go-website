@@ -19,13 +19,13 @@ const FloatingActions: React.FC = () => {
       icon: Phone,
       label: 'Call Now',
       href: 'tel:033417675',
-      color: 'bg-primary-red hover:bg-primary-dark',
+      color: 'bg-primary-blue hover:bg-primary-dark',
     },
     {
       icon: MessageCircle,
       label: 'Get Quote',
       href: '/contact',
-      color: 'bg-primary-yellow hover:bg-secondary-dark text-gray-900',
+      color: 'bg-primary-orange hover:bg-secondary-dark text-white',
     },
   ];
 
@@ -71,7 +71,7 @@ const FloatingActions: React.FC = () => {
             className={`w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 ${
               isOpen
                 ? 'bg-gray-700 hover:bg-gray-800'
-                : 'bg-gradient-to-r from-primary-red to-primary-yellow hover:shadow-neon'
+                : 'bg-gradient-to-r from-primary-blue to-primary-orange hover:shadow-neon'
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
