@@ -17,7 +17,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl"
           >
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">About Tyres2Go & JT Automotive</h1>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">About Tyres2Go</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
               Christchurch's trusted partner for quality tyres and comprehensive automotive services. 
               Over 15 years of experience keeping Canterbury drivers safe on the road.
@@ -67,19 +67,18 @@ const About: React.FC = () => {
                 <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
                   <Wrench className="w-6 h-6 text-gray-900" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900">JT Automotive</h2>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900">Automotive Services</h2>
               </div>
               <div className="space-y-4 text-gray-600 text-lg">
                 <p>
-                  {companyValues.jtAuto.description}
+                  In addition to our tyre expertise, Tyres2Go offers comprehensive automotive repair services at our Riccarton facility. We serve private car owners and commercial fleets with experienced mechanics and modern facilities.
                 </p>
                 <p>
-                  Located at our Riccarton facility, JT Automotive provides prompt WOF inspections, complete vehicle 
-                  servicing, mechanical repairs, auto-electrical work, and specialist services for hybrid and electric vehicles. 
+                  We provide prompt WOF inspections, complete vehicle servicing, mechanical repairs, auto-electrical work, and specialist services for hybrid and electric vehicles. 
                   Our qualified mechanics are experienced with all makes and models - European, Japanese, American, and Korean vehicles.
                 </p>
                 <p>
-                  {companyValues.jtAuto.safetyAdvice}
+                  {companyValues.tyres2go.safetyAdvice}
                 </p>
               </div>
             </motion.div>
@@ -120,7 +119,7 @@ const About: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {companyValues.jtAuto.values.slice(0, 4).map((value, index) => (
+            {companyValues.tyres2go.additionalValues.slice(0, 4).map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

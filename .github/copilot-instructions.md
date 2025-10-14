@@ -1,9 +1,9 @@
-# Tyres2Go & JT Auto - Combined Website Project
+# Tyres2Go - Comprehensive Auto & Tyre Services Website
 
 ## Project Overview
-This is a modern React TypeScript website that combines the functionality of:
-- **Tyres2Go** (www.tyres2go.net.nz) - Tyre sales and services
-- **JT Auto** (www.jtauto.co.nz) - Auto repair and maintenance services
+This is a modern React TypeScript website for Tyres2Go, providing:
+- **Tyre Sales & Services** - Full range of tyre brands and services
+- **Automotive Repairs** - Complete mechanical and electrical services (formerly JT Auto, now merged)
 
 ## Technology Stack
 - **Frontend Framework**: React 18+

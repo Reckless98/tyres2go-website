@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
           >
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Contact Us</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-              Get in touch with Tyres2Go & JT Automotive. We're here to help with all your tyre and automotive service needs across Christchurch.
+              Get in touch with Tyres2Go. We're here to help with all your tyre and automotive service needs across Christchurch.
             </p>
           </motion.div>
         </div>
@@ -58,24 +58,7 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="font-heading font-bold text-gray-900">Call Us</h3>
                 <a href="tel:033417675" className="text-primary-red hover:text-primary-dark font-medium">03 341 7675</a>
-                <p className="text-sm text-gray-600">Tyres2Go</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="flex items-center gap-4"
-            >
-              <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-gray-900" />
-              </div>
-              <div>
-                <h3 className="font-heading font-bold text-gray-900">Call Us</h3>
-                <a href="tel:033417674" className="text-primary-red hover:text-primary-dark font-medium">03 341 7674</a>
-                <p className="text-sm text-gray-600">JT Automotive</p>
+                <p className="text-sm text-gray-600">All Services</p>
               </div>
             </motion.div>
 

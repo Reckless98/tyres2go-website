@@ -187,7 +187,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-gray-400">
-              © {currentYear} Tyres2Go & JT Auto. All rights reserved.
+              © {currentYear} Tyres2Go. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <Link to="/privacy" className="hover:text-primary-yellow transition-colors">

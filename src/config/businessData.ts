@@ -459,7 +459,7 @@ export const testimonials = [
   {
     id: 6,
     name: 'J Gray',
-    text: 'JT Automotive were very professional and fitted my car in when no other WOF company could. Top rate service that I highly recommend.',
+    text: 'Tyres2Go were very professional and fitted my car in when no other WOF company could. Top rate service that I highly recommend.',
     rating: 5,
     service: 'WOF',
   },
@@ -656,11 +656,7 @@ export const companyValues = {
       },
     ],
     certifications: ['MTA Member', 'Hunter Alignment Certified'],
-  },
-  jtAuto: {
-    title: 'About JT Automotive',
-    description: 'JT Automotive offers comprehensive car repairs and prompt WOF service at our Riccarton garage. We serve private car owners and commercial fleets with experienced mechanics and modern facilities.',
-    values: [
+    additionalValues: [
       {
         title: 'Qualified Mechanics',
         description: 'All our technicians are fully qualified and experienced in servicing all makes and models.',
@@ -693,21 +689,21 @@ export const companyValues = {
     safetyAdvice: 'We recommend a comprehensive safety check every 6 months. While a WOF is required annually, it may miss gradual issues like tyre wear, brake deterioration, or fluid leaks that develop between inspections.',
   },
   combined: {
-    title: 'Why Choose Tyres2Go & JT Automotive',
-    description: 'When you choose us, you get the best of both worlds - expert tyre services from Tyres2Go and comprehensive automotive repairs from JT Automotive, all under one trusted brand.',
+    title: 'Why Choose Tyres2Go',
+    description: 'Expert tyre services and comprehensive automotive repairs - all under one trusted brand with over 15 years of experience in Christchurch.',
     reasons: [
-      'Over 15 years of combined experience in Christchurch',
+      'Over 15 years of experience serving Christchurch',
       '6 convenient locations across Christchurch and Canterbury',
       'MTA certified with industry-leading standards',
       '25+ quality tyre brands available',
       'State-of-the-art equipment including 9 Hunter Laser alignment machines',
-      'Comprehensive services - tyres, mechanical, electrical, WOF',
+      'Comprehensive services - tyres, mechanical repairs, electrical, WOF',
       'Mobile tyre service 7 days a week',
       'Qualified and experienced technicians',
       'Transparent pricing with no hidden fees',
       'Free quotes and honest advice',
       'Prompt turnaround times',
-      'Courtesy cars and pick-up/drop-off service',
+      'Courtesy cars and pick-up/drop-off service available',
     ],
   },
 };

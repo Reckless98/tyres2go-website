@@ -95,15 +95,16 @@ The project uses Tailwind CSS with a custom configuration including:
 
 ## 🎯 Recent Updates
 
-### Comprehensive Website Overhaul (January 2025)
-- ✅ **Complete Content Integration**: Merged Tyres2Go and JT Automotive services
-- ✅ **24+ Automotive Services**: Full JT Automotive service catalog with descriptions
-- ✅ **12+ Tyre Services**: Complete tyre service offerings
+### Business Merger & Website Overhaul (January 2025)
+- ✅ **Business Consolidation**: JT Automotive acquired and merged into Tyres2Go brand
+- ✅ **Unified Services**: All automotive and tyre services now under Tyres2Go
+- ✅ **24+ Automotive Services**: Complete automotive service catalog with descriptions
+- ✅ **12+ Tyre Services**: Comprehensive tyre service offerings
 - ✅ **6 Locations**: All Christchurch and Canterbury locations with full details
 - ✅ **Enhanced Pages**: Home, About, Contact, Tyres, and Auto Services fully populated
 - ✅ **Tyre Guidance**: "When to Replace Your Tyres" educational content
-- ✅ **Company Values**: Merged values and "Why Choose Us" sections
-- ✅ **Contact Integration**: Separate phone numbers for Tyres2Go and JT Automotive
+- ✅ **Company Values**: Unified brand values and "Why Choose Us" sections
+- ✅ **Single Contact Number**: 03 341 7675 for all services
 - ✅ **MTA Certification**: Prominently displayed across all pages
 - ✅ **Mobile Service**: 7-day availability highlighted throughout
 
@@ -138,13 +139,7 @@ This project is proprietary and confidential.
 - Website: www.tyres2go.net.nz
 - Email: info@tyres2go.net.nz
 - Phone: 03 341 7675
-- Services: Tyres, Wheel Alignment, Mobile Service
-
-### JT Automotive
-- Website: www.jtauto.co.nz
-- Phone: 03 341 7674
-- Email: jtautomotiveltd@yahoo.co.nz
-- Services: WOF, Auto Repairs, Vehicle Servicing
+- Services: All Tyre Services, Wheel Alignment, Mobile Service, WOF, Auto Repairs, Vehicle Servicing
 
 ### Main Location
 477 Blenheim Road, Sockburn, Christchurch 8042  

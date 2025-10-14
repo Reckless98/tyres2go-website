@@ -18,8 +18,8 @@ export const seoConfig = {
     'Bridgestone tyres',
     'Continental tyres',
     'MTA certified mechanic',
-    'JT Auto Christchurch',
     'automotive repairs',
+    'car repairs Christchurch',
   ],
   author: 'Tyres2Go',
   social: {
@@ -33,7 +33,6 @@ export const seoConfig = {
     foundingDate: '2008',
     email: 'info@tyres2go.net.nz',
     phone: '03 341 7675',
-    phoneJTAuto: '03 341 7674',
     address: {
       street: '477 Blenheim Road',
       suburb: 'Sockburn',
