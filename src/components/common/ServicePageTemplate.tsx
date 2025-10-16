@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { ArrowRight, CheckCircle, Phone, Calendar } from 'lucide-react';
 import Button from './Button';
 import SEO from './SEO';
@@ -33,7 +33,6 @@ interface ServicePageTemplateProps {
 const ServicePageTemplate = ({
   title,
   description,
-  heroImage,
   features,
   benefits = [],
   pricing,
@@ -73,16 +72,16 @@ const ServicePageTemplate = ({
               <Button
                 variant="secondary"
                 size="lg"
-                icon={<Calendar className="w-5 h-5" />}
               >
+                <Calendar className="w-5 h-5" />
                 Book Appointment
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                icon={<Phone className="w-5 h-5" />}
                 className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
               >
+                <Phone className="w-5 h-5" />
                 Call 03 341 7675
               </Button>
             </div>
@@ -195,7 +194,8 @@ const ServicePageTemplate = ({
                   {pricing.price}
                 </div>
               )}
-              <Button variant="gradient" size="lg" icon={<Phone className="w-5 h-5" />}>
+              <Button variant="primary" size="lg">
+                <Phone className="w-5 h-5" />
                 Get a Free Quote
               </Button>
             </motion.div>
@@ -248,16 +248,16 @@ const ServicePageTemplate = ({
               <Button
                 variant="secondary"
                 size="lg"
-                icon={<Calendar className="w-5 h-5" />}
               >
+                <Calendar className="w-5 h-5" />
                 Book Online Now
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                icon={<Phone className="w-5 h-5" />}
                 className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
               >
+                <Phone className="w-5 h-5" />
                 03 341 7675
               </Button>
             </div>

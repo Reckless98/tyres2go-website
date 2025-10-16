@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, Clock, Navigation } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Card from '../components/common/Card';
-import Button from '../components/common/Button';
 import { locations } from '../config/businessData';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-red to-primary-yellow text-white py-20">
+      <section className="bg-gradient-to-r from-primary-red to-secondary text-white py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Contact Us</h1>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Visit Us</h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-              Get in touch with Tyres2Go. We're here to help with all your tyre and automotive service needs across Christchurch.
+              Find your nearest Tyres2Go location in Christchurch. 6 convenient branches ready to serve you, or we can come to you with our mobile service.
             </p>
           </motion.div>
         </div>
@@ -151,116 +132,37 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Why Call Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-8"
+              className="mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gray-900">Send Us a Message</h2>
-              <p className="text-lg text-gray-600">
-                Have a question or need a quote? Fill out the form below and we'll get back to you as soon as possible.
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gray-900">Need Assistance?</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Call us directly for quotes, bookings, or any questions about our services. Our friendly team is ready to help.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="tel:033417675"
+                  className="inline-flex items-center justify-center gap-2 bg-primary-red hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call 03 341 7675
+                </a>
+                <a
+                  href="mailto:info@tyres2go.net.nz"
+                  className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold px-8 py-4 rounded-lg transition-all"
+                >
+                  <Mail className="w-5 h-5" />
+                  Email Us
+                </a>
+              </div>
             </motion.div>
-
-            <Card className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-red"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-red"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-red"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-red"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="tyres">Tyre Enquiry</option>
-                      <option value="servicing">Vehicle Servicing</option>
-                      <option value="wof">WOF Inspection</option>
-                      <option value="repairs">Repairs</option>
-                      <option value="mobile">Mobile Service</option>
-                      <option value="quote">Request a Quote</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-red"
-                    placeholder="Tell us about your requirements..."
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
-                </Button>
-              </form>
-            </Card>
           </div>
         </div>
       </section>

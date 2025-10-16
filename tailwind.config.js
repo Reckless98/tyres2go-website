@@ -8,40 +8,40 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563eb', // Vibrant Royal Blue
-          blue: '#2563eb',
-          orange: '#f97316', // Bold Tangerine Orange
-          dark: '#1e40af',
-          light: '#60a5fa',
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#2563eb',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          DEFAULT: '#E31E24', // Tyres2Go Red
+          red: '#E31E24',
+          yellow: '#FDB913', // Tyres2Go Yellow
+          dark: '#B71C1C',
+          light: '#FF5252',
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#E31E24',
+          600: '#B71C1C',
+          700: '#991b1b',
+          800: '#7f1d1d',
+          900: '#450a0a',
         },
         secondary: {
-          DEFAULT: '#f97316', // Bold Orange
-          dark: '#ea580c',
-          light: '#fb923c',
-          50: '#fff7ed',
-          100: '#ffedd5',
-          200: '#fed7aa',
-          300: '#fdba74',
-          400: '#fb923c',
-          500: '#f97316',
-          600: '#ea580c',
+          DEFAULT: '#FDB913', // Tyres2Go Yellow
+          dark: '#F57C00',
+          light: '#FFD54F',
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#FDB913',
+          600: '#F57C00',
           700: '#c2410c',
           800: '#9a3412',
-          900: '#7c2d12',
+          900: '#78350f',
         },
         accent: {
           green: '#10b981',  // Fresh Green
-          yellow: '#fbbf24', // Golden Yellow
+          yellow: '#FDB913', // Tyres2Go Yellow
           gray: '#6b7280',
           lightGray: '#9ca3af',
         },
