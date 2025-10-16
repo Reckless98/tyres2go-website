@@ -190,14 +190,17 @@ const Footer: React.FC = () => {
               © {currentYear} Tyres2Go. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <Link to="/privacy" className="hover:text-primary-yellow transition-colors">
+              <Link to="/privacy-policy" className="hover:text-primary-yellow transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="hover:text-primary-yellow transition-colors">
                 Terms & Conditions
               </Link>
-              <Link to="/sitemap" className="hover:text-primary-yellow transition-colors">
-                Sitemap
+              <Link to="/warranty" className="hover:text-primary-yellow transition-colors">
+                Warranty
+              </Link>
+              <Link to="/payment-options" className="hover:text-primary-yellow transition-colors">
+                Payment Options
               </Link>
             </div>
             <div className="text-sm text-gray-400">
