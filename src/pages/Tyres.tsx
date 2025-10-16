@@ -43,7 +43,7 @@ const Tyres: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-red to-primary-yellow text-white py-20">
+      <section className="bg-gradient-to-r from-primary-red to-secondary text-white py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -2,7 +2,7 @@
 export const locations = [
   {
     id: 1,
-    name: 'Riccarton (Main)',
+    name: 'Riccarton - Main Branch',
     address: '477 Blenheim Road',
     suburb: 'Sockburn',
     city: 'Christchurch',
