@@ -108,9 +108,9 @@ const Home: React.FC = () => {
                     size="lg"
                     as={Link}
                     to="/contact"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary-blue backdrop-blur-sm"
+                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm"
                   >
-                    Book Mobile Service
+                    Find Our Locations
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </div>
@@ -491,26 +491,26 @@ const Home: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-2xl font-bold mb-2">Ready to Get Started?</h3>
-                <p className="text-gray-300">Contact us today for a free quote on tyres or automotive services</p>
+                <p className="text-gray-300">Call us today for a quote on tyres or automotive services</p>
               </div>
               <div className="flex gap-4">
                 <Button
                   variant="primary"
                   size="lg"
-                  as={Link}
-                  to="/contact"
+                  onClick={() => window.location.href = 'tel:033417675'}
                   className="bg-primary-red hover:bg-primary-dark"
                 >
-                  Get a Quote
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call 03 341 7675
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => window.location.href = 'tel:033417675'}
-                  className="border-2 border-primary-yellow text-primary-yellow hover:bg-primary-yellow hover:text-gray-900"
+                  as={Link}
+                  to="/contact"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-gray-900"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
+                  Find a Branch
                 </Button>
               </div>
             </div>

@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-red to-primary-yellow text-white py-20">
+      <section className="bg-gradient-to-r from-primary-red to-secondary text-white py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ const About: React.FC = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
                   <Wrench className="w-6 h-6 text-gray-900" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900">Automotive Services</h2>
@@ -173,7 +173,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-red to-primary-yellow text-white">
+      <section className="py-20 bg-gradient-to-r from-primary-red to-secondary text-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
